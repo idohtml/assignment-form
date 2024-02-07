@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-:root {
-  --clr-primary-500: #ff9900;
-  --clr-primary-600: #eb8d00;
-  --clr-outline-200: #e5e7eb;
-  --clr-outline-300: #d1d5db;
-  --clr-outline-500: #6b7280;
-}
-
 *,
 *::before,
 *::after {
@@ -20,6 +12,7 @@
 }
 
 body {
+  background-color: #9dbebb;
   min-height: 100vh;
   overflow-x: hidden;
   text-rendering: optimizeSpeed;
@@ -28,7 +21,6 @@ body {
 
 html {
   font-family: "Poppins", sans-serif;
-  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -96,3 +88,77 @@ select {
 }
 
 /* CSS RESET */
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & h1 {
+    color: whitesmoke;
+    font-size: 6rem;
+    font-weight: 300;
+  }
+
+  p {
+    color: hsla(221, 39%, 11%, 50%);
+    margin-bottom: 4rem;
+  }
+}
+
+& label {
+  color: whitesmoke;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 1;
+  padding-bottom: 0.5rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  padding: 4rem;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    width: 80%;
+  }
+
+  & button {
+    color: whitesmoke;
+    background-color: black;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+
+    margin-top: 1rem;
+    padding: 0.5rem 3rem;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
